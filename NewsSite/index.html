@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copied News haha</title>
+
+    <!--CSS link  -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Fonts API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=
+Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="main-nav">
+        <div class="logo">
+          <a href="#" onclick="reload()" class="logo">
+            <img src="./images/pngwing.com.png" alt="logo" />
+          </a>
+        </div>
+
+        <div class="navlist">
+          <ul class="list">
+            <li class="list-item" id="ipl" onclick="onNavItemClick('ipl') ">
+              IPL
+            </li>
+            <li
+              class="list-item"
+              id="politics"
+              onclick="onNavItemClick('politics') "
+            >
+              Politics
+            </li>
+            <li
+              class="list-item"
+              id="finance"
+              onclick="onNavItemClick('finance') "
+            >
+              Finance
+            </li>
+          </ul>
+        </div>
+        <div class="search-bar">
+          <input
+            type="text"
+            name="news-input"
+            id="search-bar"
+            placeholder=" Enter the topic eg. tech"
+          />
+          <button class="search-btn" id="search-btn">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img src="https://via.placeholder.com/400x200" alt="" id="news-img" />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">headline</h3>
+          <h6 id="news-source" class="news-source">Gadget 16/06/2023</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+            inventore est quo reprehenderit suscipit repellat quas dicta
+            eligendi quibusdam ex. Dolore asperiores cupiditate architecto
+            placeat.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
