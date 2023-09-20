@@ -21,7 +21,8 @@
 }
 
 .player-container{
- position: relative;    
+ position: relative;
+  z-index: 10;    
 }
 
 .player-container svg{
