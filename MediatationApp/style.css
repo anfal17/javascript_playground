@@ -27,9 +27,9 @@
 .player-container svg{
     position: absolute;
     height: 50%;
-    top: 25%;
-    left: 15%;
-    transform: translate(-50% -50%) rotate(-90deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%) rotate(-90deg);
     pointer-events: none;
 }
 
@@ -88,3 +88,77 @@ video{
 }
 
 
+@media (max-width: 768px) {
+    .app {
+        height: 100%;
+    }
+
+    video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -10;
+    }
+
+    .time-select {
+        position: absolute;
+        top: -220px; /* Adjust as needed for spacing from the top */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        z-index: 1;
+    }
+
+    .time-select button {
+        margin: 5px;
+    }
+
+    .player-container {
+        position: absolute;
+        top: 50%; /* Center play/pause controls vertically */
+        left: 50%; /* Center play/pause controls horizontally */
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+        z-index: 1;
+    }
+
+    .sound-picker {
+        position: absolute;
+        bottom: 10px; /* Adjust as needed for spacing from the bottom */
+        width: 100%;
+        display: flex;
+        justify-content: space-between; /* Arrange sound picker buttons on both sides of the play button */
+        padding: 0 20px; /* Add padding to separate the buttons */
+        z-index: 1;
+    }
+
+    .sound-picker button {
+        border: none;
+        height: 100px; /* Adjust as needed for larger buttons */
+        width: 100px; /* Adjust as needed for larger buttons */
+        border-radius: 50%;
+    }
+
+    .sound-picker button img {
+        height: 70%; /* Adjust as needed for larger images */
+    }
+
+    .player-container svg {
+        height: 200px; /* Adjust as needed */
+        margin-bottom: 10px; /* Adjust as needed for spacing between play/pause button and time display */
+    }
+
+    .time-display {
+        border: 2px dashed black;
+        border-radius: 15px;
+        padding: 10px;
+        font-size: 50px; /* Adjust as needed */
+        color: rgb(255, 255, 255);
+    }
+}
